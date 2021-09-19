@@ -14,3 +14,5 @@
     1. Time complexity
     2. Space complexity
 
+![Image of stack of plates](Readme_image/plates.jpg)
+
