@@ -2,7 +2,7 @@
 ## Datastructures and algorithms using python
 
 *This code is not made for dummies*
-*The develper created it a a DSA reminder*
+*The developer created it as a DSA reminder*
 *Some expirience with DSA is needed*
 **Most of the code has been learnt from udemy**
 
