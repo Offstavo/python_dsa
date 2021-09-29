@@ -1,4 +1,4 @@
-# Insertion into a singly linked list
+# Deletion of an entire linked list
 
 class Node:
     def __init__(self, value = None):
@@ -37,17 +37,24 @@ class SLinkedList:
                     index += 1
                 nextNode = tempNode.next
                 tempNode.next = newNode
-                nextNode.next = nextNode
+
+    def deleteEntireSSL(self):
+        if self.head is None:
+            print("The SSL does not exist")
+        else:
+            self.head = None
+            self.tail = None
 
 singlyLinkedList = SLinkedList()
 singlyLinkedList.insertSSL(1,1)
 singlyLinkedList.insertSSL(2,1)
 singlyLinkedList.insertSSL(3,1)
 singlyLinkedList.insertSSL(4,1)
-
 singlyLinkedList.insertSSL(0,0)
-singlyLinkedList.insertSSL(0,3)
-print([node.value for node in singlyLinkedList])
+singlyLinkedList.insertSSL(0,4)
 
+print([node.value for node in singlyLinkedList])
+singlyLinkedList.deleteEntireSSL()
+print([node.value for node in singlyLinkedList])
 
 # Code dint work as expected

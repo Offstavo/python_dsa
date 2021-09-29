@@ -1,4 +1,4 @@
-# Insertion into a singly linked list
+# Traverse a singly linked list
 
 class Node:
     def __init__(self, value = None):
@@ -39,6 +39,16 @@ class SLinkedList:
                 tempNode.next = newNode
                 nextNode.next = nextNode
 
+        # Traverse single linked list
+    def traverseSSL(self):
+        if self.head is None:
+            print("The singly linked list does not exist")
+        else:
+            node = self.head
+            while node is not None:
+                print(node.value)
+                node = node.next
+
 singlyLinkedList = SLinkedList()
 singlyLinkedList.insertSSL(1,1)
 singlyLinkedList.insertSSL(2,1)
@@ -48,6 +58,4 @@ singlyLinkedList.insertSSL(4,1)
 singlyLinkedList.insertSSL(0,0)
 singlyLinkedList.insertSSL(0,3)
 print([node.value for node in singlyLinkedList])
-
-
-# Code dint work as expected
+singlyLinkedList.traverseSSL()
