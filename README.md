@@ -17,3 +17,29 @@
 
 ![Image of stack of plates](Readme_image/plates.jpg)
 
+* Arrays 
+    1. Operations on arrays
+    2. Time and space complexity
+* Lists
+    1. Operations on lists
+    2. Common pitfalls and ways to avoid them 
+    3. Time and space complexity
+
+![Image of casette](Readme_image/cassette.jpg)
+
+* Dictionaries
+    1. Operations on dictionaries
+    2. Time and space complexity
+* Tuples
+    1. Operations on Tuples
+    2. Time and space complexity
+
+![Image of techwall](Readme_image/techWall.jpg)
+
+* Linked Lists
+    1. Types of linked lists
+    2. Time and space complexity
+    3. Time and space complexity of linked lists vs arrays
+
+![Image of Admiration square](Readme_image/admirationSquare.jpg)
+
