@@ -37,6 +37,7 @@ class SLinkedList:
                     index += 1
                 nextNode = tempNode.next
                 tempNode.next = newNode
+                newNode.next = nextNode
 
     def deleteEntireSSL(self):
         if self.head is None:
@@ -57,4 +58,4 @@ print([node.value for node in singlyLinkedList])
 singlyLinkedList.deleteEntireSSL()
 print([node.value for node in singlyLinkedList])
 
-# Code dint work as expected
+# Code worked as expected

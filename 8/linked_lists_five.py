@@ -9,7 +9,6 @@ class SLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-
     def __iter__(self):
         node = self.head
         while node:
@@ -80,7 +79,7 @@ singlyLinkedList.insertSSL(0,0)
 singlyLinkedList.insertSSL(0,4)
 
 print([node.value for node in singlyLinkedList])
-singlyLinkedList.deleteNode(3)
+singlyLinkedList.deleteNode(0)
 print([node.value for node in singlyLinkedList])
 
 # code works but when it comes to deleteNode(0) it doesnt work
