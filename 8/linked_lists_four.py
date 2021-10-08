@@ -9,6 +9,7 @@ class SLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+
     def __iter__(self):
         node = self.head
         while node:
@@ -37,7 +38,7 @@ class SLinkedList:
                     index += 1
                 nextNode = tempNode.next
                 tempNode.next = newNode
-                nextNode.next = nextNode
+                newNode.next = nextNode
 
     def searchSSL(self, nodeValue):
         if self.head is None:
@@ -57,8 +58,8 @@ singlyLinkedList.insertSSL(3,1)
 singlyLinkedList.insertSSL(4,1)
 
 singlyLinkedList.insertSSL(0,0)
-singlyLinkedList.insertSSL(0,3)
+singlyLinkedList.insertSSL(0,4)
 print([node.value for node in singlyLinkedList])
 print(singlyLinkedList.searchSSL(3))
 
-# Code dint work as expected
+# Code worked as expected

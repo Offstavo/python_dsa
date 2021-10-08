@@ -17,3 +17,5 @@ node2 = Node(2)
 singlyLinkedList.head = node1
 singlyLinkedList.head.next = node2
 singlyLinkedList.tail = node2
+
+# Skeleton code to be used in the other following modules
