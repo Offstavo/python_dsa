@@ -1,7 +1,7 @@
 # Deletion of a node from singly linked list
 
 class Node:
-    def __init__(self, value = None):
+    def __init__(self, value=None):
         self.value = value
         self.next = None
 
@@ -14,9 +14,8 @@ class SLinkedList:
         while node:
             yield node
             node = node.next
-
-
-    def insertSSL(self, value, location):
+    # insert in Linked List
+    def insertSLL(self, value, location):
         newNode = Node(value)
         if self.head is None:
             self.head = newNode
@@ -41,18 +40,18 @@ class SLinkedList:
 
     def deleteNode(self, location):
         if self.head is None:
-            print("The SSL does not exist")
+            print("The SLL does not exist")
         else:
             if location == 0:
                 if self.head == self.tail:
-                    self.head == None
-                    self.tail == None
+                    self.head = None
+                    self.tail = None
                 else:
-                    self.head == self.head.next
+                    self.head = self.head.next
             elif location == 1:
                 if self.head == self.tail:
-                    self.head == None
-                    self.tail == None
+                    self.head = None
+                    self.tail = None
                 else:
                     node = self.head
                     while node is not None:
@@ -70,16 +69,17 @@ class SLinkedList:
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
 
+
 singlyLinkedList = SLinkedList()
-singlyLinkedList.insertSSL(1,1)
-singlyLinkedList.insertSSL(2,1)
-singlyLinkedList.insertSSL(3,1)
-singlyLinkedList.insertSSL(4,1)
-singlyLinkedList.insertSSL(0,0)
-singlyLinkedList.insertSSL(0,4)
+singlyLinkedList.insertSLL(1, 1)
+singlyLinkedList.insertSLL(2, 1)
+singlyLinkedList.insertSLL(3, 1)
+singlyLinkedList.insertSLL(4, 1)
+singlyLinkedList.insertSLL(0, 0)
+singlyLinkedList.insertSLL(0, 4)
 
 print([node.value for node in singlyLinkedList])
 singlyLinkedList.deleteNode(0)
 print([node.value for node in singlyLinkedList])
 
-# code works but when it comes to deleteNode(0) it doesnt work
+# code worked as expected
