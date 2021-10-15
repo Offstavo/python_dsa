@@ -1,4 +1,4 @@
-# delete a node from binary tree
+# delete entire binary tree
 
 import trees_six as queue
 
@@ -99,35 +99,13 @@ def deleteDeepestNode(rootNode, dNode):
 # deleteDeepestNode(newBT, newNode)
 # levelOrderTraversal(newBT)
 
-def deleteNodeBT(rootNode, node):
-    if not rootNode:
-        return "The BT does not exist"
-    else:
-        customQueue = queue.Queue()
-        customQueue.enqueue(rootNode)
-        while not(customQueue.isEmpty()):
-            root = customQueue.dequeue()
-            if root.value.data == node:
-                dNode = getDeepestNode(rootNode)
-                root.value.data = dNode.data
-                deleteDeepestNode(rootNode, dNode)
-                return "The node has been successfully deleted"
-            if (root.value.leftChild is not None):
-                customQueue.enqueue(root.value.leftChild)
+def deleteBT(rootNode):
+    rootNode.data = None
+    rootNode.leftChild = None
+    rootNode.rightChild = None
+    return "The BT has been successfully deleted"
 
-            if (root.value.rightChild is not None):
-                customQueue.enqueue(root.value.rightChild)
-        return "Failed to delete"
-
-# deleteNodeBT(newBT, 'Tea')
-# levelOrderTraversal(newBT)
-
-deleteNodeBT(newBT, 'Hot')
+deleteBT(newBT)
 levelOrderTraversal(newBT)
 
-# newNode = TreeNode("Cola")
-# print(insertNodeBT(newBT, newNode))
-# levelOrderTraversal(newBT)
-
 # code worked as expected
-# Space complexity O(n)
