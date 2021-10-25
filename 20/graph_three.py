@@ -1,4 +1,4 @@
-# Traverse a graph using bfs
+# Traverse a graph using dfs
 
 class Graph:
     def __init__(self, gdict=None):
@@ -9,19 +9,19 @@ class Graph:
     def addEdge(self, vertex, edge):
         self.gdict[vertex].append(edge)
 
-    def bfs(self, vertex):
+    def dfs(self, vertex):
         visited = [vertex]
-        queue = [vertex]
-        while queue:
-            deVertex = queue.pop(0)
-            print(deVertex)
-            for adjacentVertex in self.gdict[deVertex]:
+        stack = [vertex]
+        while stack:
+            popVertex = stack.pop()
+            print(popVertex)
+            for adjacentVertex in self.gdict[popVertex]:
                 if adjacentVertex not in visited:
                     visited.append(adjacentVertex)
-                    queue.append(adjacentVertex)
+                    stack.append(adjacentVertex)
 
-    # Time compexity of bfs O(V + E)
-    # Space complexity of bfs O(V + E)
+    # Time complexity of dfs O(V + E)
+    # Space complexity of dfs O(V + E)
 
 customDict = { "a" : ["b","c"],
                "b" : ["a","d","e"],
@@ -32,6 +32,6 @@ customDict = { "a" : ["b","c"],
                 }
 
 graph = Graph(customDict)
-graph.bfs("a")
+graph.dfs("a")
 
 # code worked as expected
